@@ -1,0 +1,31 @@
+{
+  "name": "data-converter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf dist",
+    "copyData": "copyfiles -u 1 data/* dist/data",
+    "prestart": "npm run clean && npm run build && npm run copyData",
+    "start": "NODE_ENV=production node dist/index.js",
+    "link": "npm run build && npm link",
+    "dev": "tsx --watch index.ts",
+    "watch": "tsc --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "Convert encoded .dat files to .csv, ready to be imported into a database.",
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "copyfiles": "^2.4.1",
+    "rimraf": "^6.0.1",
+    "tsx": "^4.19.4",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "dotenv": "^16.5.0",
+    "kebab-case": "^2.0.2"
+  }
+}
