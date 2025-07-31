@@ -15,7 +15,7 @@
   },
   "author": "",
   "license": "ISC",
-  "description": "Convert encoded .dat files to .csv, ready to be imported into a database.",
+  "description": "Quick template for TS + Node app",
   "devDependencies": {
     "@types/node": "^22.14.0",
     "copyfiles": "^2.4.1",
